@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using System.Threading;
 
 namespace ThreadTest
@@ -40,9 +38,10 @@ namespace ThreadTest
 
             while (count < 10)
             {
-                Thread.Sleep(1);
+                Thread.Sleep(1000);
 
-                if (count == 5) Debugger.Break();
+                if (count == 3)
+                    Debugger.Break();
 
                 count = count + 1;
                 Console.WriteLine($"{threadId}:{count}");
@@ -51,3 +50,8 @@ namespace ThreadTest
         }
     }
 }
+
+
+
+
+
